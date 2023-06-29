@@ -4,11 +4,6 @@ import { Providers } from '@/app/providers'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-export const metadata = {
-	title: 'Chalvin Wiradhika',
-	description: 'Portfolio Website',
-}
-
 export default function RootLayout({
 	children,
 }: {
