@@ -1,4 +1,4 @@
-import { Center, HStack, Text, Link as CLink } from '@chakra-ui/react'
+import { Center, HStack, Link as CLink } from '@chakra-ui/react'
 import { Github, Linkedin, Instagram } from 'lucide-react'
 import Link from 'next/link'
 
@@ -22,7 +22,7 @@ const navLinks = [
 
 const Footer = () => {
 	return (
-		<Center pos='sticky' bottom={0} w='100%' bg='black' h={16}>
+		<Center pos='fixed' bottom={0} left={0} w='100%' bg='black' h={16}>
 			<HStack spacing={4}>
 				{navLinks.map((navLink) => (
 					<CLink key={navLink.text} as={Link} href={navLink.href} isExternal>

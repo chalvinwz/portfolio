@@ -1,8 +1,10 @@
-'use client'
-import { Container } from '@chakra-ui/react'
-import { Providers } from '@/app/providers'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import MainContainer from '@/components/MainContainer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Chalvin Wiradhika',
+	description: "Chalvin Wiradhika's Portfolio Website",
+}
 
 export default function RootLayout({
 	children,
@@ -12,13 +14,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body suppressHydrationWarning={true}>
-				<Providers>
-					<Container maxW='container.md'>
-						<Navbar />
-						{children}
-						<Footer />
-					</Container>
-				</Providers>
+				<MainContainer>{children}</MainContainer>
 			</body>
 		</html>
 	)
