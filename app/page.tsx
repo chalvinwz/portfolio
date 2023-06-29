@@ -1,5 +1,7 @@
 'use client'
-import { Button, Heading, Stack, Text, VStack } from '@chakra-ui/react'
+
+import DownloadResume from '@/components/DownloadResume'
+import { Heading, Stack, Text, VStack } from '@chakra-ui/react'
 import { useRouter } from 'next/navigation'
 
 const Home = () => {
@@ -10,14 +12,7 @@ const Home = () => {
 			<VStack align='left' spacing={4}>
 				<Heading>Chalvin Wiradhika</Heading>
 				<Text>Software Engineer</Text>
-				<Button
-					maxW={24}
-					colorScheme='blue'
-					variant='outline'
-					onClick={() => router.push('/resume')}
-				>
-					Resume
-				</Button>
+				<DownloadResume />
 			</VStack>
 		</Stack>
 	)

@@ -2,26 +2,22 @@ import {
 	Flex,
 	HStack,
 	Spacer,
-	Text,
 	Link as CLink,
 	Image,
 	Box,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import DownloadResume from './DownloadResume'
 
 const navLinks = [
-	// {
-	// 	href: '/blog',
-	// 	text: 'Blog',
-	// },
-	// {
-	// 	href: '/about',
-	// 	text: 'About',
-	// },
 	{
-		href: '/resume',
-		text: 'Resume',
+		href: '/blog',
+		text: 'Blog',
+	},
+	{
+		href: '/about',
+		text: 'About',
 	},
 ]
 
@@ -39,7 +35,7 @@ const Navbar = () => {
 			<Spacer />
 
 			<HStack spacing={4}>
-				{navLinks.map((navLink) => (
+				{/* {navLinks.map((navLink) => (
 					<Text
 						key={navLink.text}
 						as={Link}
@@ -48,7 +44,8 @@ const Navbar = () => {
 					>
 						{navLink.text}
 					</Text>
-				))}
+				))} */}
+				<DownloadResume />
 			</HStack>
 		</Flex>
 	)
