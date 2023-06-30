@@ -22,7 +22,15 @@ const navLinks = [
 
 const Footer = () => {
 	return (
-		<Center pos='fixed' bottom={0} left={0} w='100%' bg='black' h={16}>
+		<Center
+			pos='fixed'
+			bottom={0}
+			left={0}
+			w='100%'
+			bg='black'
+			h={12}
+			alignItems='start'
+		>
 			<HStack spacing={4}>
 				{navLinks.map((navLink) => (
 					<CLink key={navLink.text} as={Link} href={navLink.href} isExternal>

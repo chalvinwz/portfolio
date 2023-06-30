@@ -5,16 +5,13 @@ import {
 	Link as CLink,
 	Image,
 	Box,
+	Text,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import DownloadResume from './DownloadResume'
 
 const navLinks = [
-	{
-		href: '/blog',
-		text: 'Blog',
-	},
 	{
 		href: '/about',
 		text: 'About',
@@ -25,7 +22,7 @@ const Navbar = () => {
 	const pathname = usePathname()
 
 	return (
-		<Flex pos='sticky' top={0} w='100%' bg='black' h={16} align='center'>
+		<Flex pos='sticky' top={0} w='100%' bg='black' h={16} align='end'>
 			<Box px={2} py={2} bg='white' borderRadius='full'>
 				<CLink as={Link} href='/'>
 					<Image src='/icon.png' alt='icon' boxSize={8} />
@@ -35,7 +32,7 @@ const Navbar = () => {
 			<Spacer />
 
 			<HStack spacing={4}>
-				{/* {navLinks.map((navLink) => (
+				{navLinks.map((navLink) => (
 					<Text
 						key={navLink.text}
 						as={Link}
@@ -44,7 +41,7 @@ const Navbar = () => {
 					>
 						{navLink.text}
 					</Text>
-				))} */}
+				))}
 				<DownloadResume />
 			</HStack>
 		</Flex>
