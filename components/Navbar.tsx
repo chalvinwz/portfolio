@@ -12,9 +12,13 @@ import { usePathname } from 'next/navigation'
 import DownloadResume from './DownloadResume'
 
 const navLinks = [
+	// {
+	// 	href: '/about',
+	// 	text: 'About',
+	// },
 	{
 		href: '/about',
-		text: 'About',
+		text: '',
 	},
 ]
 
