@@ -2,6 +2,8 @@ import '@mantine/core/styles.css'
 import '@mantine/code-highlight/styles.css'
 
 import { MantineProvider, ColorSchemeScript, Container } from '@mantine/core'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata = {
 	title: 'My Mantine app',
@@ -20,7 +22,11 @@ export default function RootLayout({
 			</head>
 			<body suppressHydrationWarning={true}>
 				<MantineProvider>
-					<Container>{children}</Container>
+					<Container>
+						<Header />
+						{children}
+						<Footer />
+					</Container>
 				</MantineProvider>
 			</body>
 		</html>
