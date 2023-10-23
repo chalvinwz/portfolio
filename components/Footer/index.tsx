@@ -15,7 +15,7 @@ const links = [
 		label: 'GitHub',
 		icon: (
 			<IconBrandGithub
-				style={{ width: rem(24), height: rem(24) }}
+				style={{ width: rem(32), height: rem(32) }}
 				stroke={1.5}
 			/>
 		),
@@ -25,7 +25,7 @@ const links = [
 		label: 'GitLab',
 		icon: (
 			<IconBrandGitlab
-				style={{ width: rem(24), height: rem(24) }}
+				style={{ width: rem(32), height: rem(32) }}
 				stroke={1.5}
 			/>
 		),
@@ -35,7 +35,7 @@ const links = [
 		label: 'LinkedIn',
 		icon: (
 			<IconBrandLinkedin
-				style={{ width: rem(24), height: rem(24) }}
+				style={{ width: rem(32), height: rem(32) }}
 				stroke={1.5}
 			/>
 		),
@@ -46,8 +46,8 @@ export default function Footer() {
 	return (
 		<footer className={classes.footer}>
 			<Container>
-				<Center mt={8} py={8}>
-					<Group>
+				<Center mt={8} pt={8} pb={16}>
+					<Group gap={16}>
 						{links.map((link) => (
 							<ActionIcon
 								key={link.link}
