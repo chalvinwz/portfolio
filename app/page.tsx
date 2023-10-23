@@ -1,10 +1,5 @@
-import { Button } from '@mantine/core'
+import { NothingFoundBackground } from '@/components/NothingFoundBackground'
 
 export default function Home() {
-	return (
-		<div>
-			<div>hi</div>
-			<Button>Button</Button>
-		</div>
-	)
+	return <NothingFoundBackground />
 }
